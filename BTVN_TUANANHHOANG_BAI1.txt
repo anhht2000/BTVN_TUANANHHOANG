@@ -1,0 +1,13 @@
+a1='10' vì ''+1 đc convert sang string khi cộng thêm 0 sẽ là '10'
+a2=-1 vì ''-1 sẽ được convert sang number và khi +0 sẽ là -1
+a3=1 vì true + false đc convert sang kiểu number là 1 + 0
+a4=2 vì 6/ '3' đc convert sang number bằng 2
+a5=8 vì '4'*'2' được convert sang number bằng 8
+a6='6px' vì thực hiện phép cộng number trước = 6 rồi cộng chuỗi ra 6px
+a7=2 vì thực hiện convert '4' sang number 
+a8=NaN vì k thể qui đổi '4px' sang number được nên là NaN
+a9='   -10  5' vì thực hiện cộng chuỗi
+a10=-15 vì qui đổi phép tính sang number
+a11=1 vì null là giá trị rỗng cộng với gtri nao thì bằng chính gtri đấy
+a12=NaN vì undefined là kiểu k xác định k thể thực hiện phép tính
+a13= -4 vì qui đổi sang kiểu number
