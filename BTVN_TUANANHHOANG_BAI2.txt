@@ -12,3 +12,4 @@ if(null || -1) alert('second')
 	// alert 'first' sẽ được thực thi vì ngay tại
 	điều kiện if đầu tiên thì -1 đã là true và nó sẽ
 	thực thi if(-1 || 0 ) alert('first');
+hahihiaha
