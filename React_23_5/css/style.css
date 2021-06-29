@@ -1,0 +1,106 @@
+img {
+    width: 100%;
+}
+
+
+.col.big-gutter {
+    padding: 0 15px 15px 15px;
+}
+
+/* .big-gutter {
+    padding-bottom: 15px !important;
+} */
+
+h2 {
+    font-size: 1.5rem;
+    /* text-align: center; */
+    padding: 17px 0;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* text-align: center; */
+    color: red;
+}
+
+span {
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.border-container {
+    width: 80%;
+    margin: auto;
+}
+
+.active-link,
+.nav-item:hover .nav-link {
+    color: orange !important;
+}
+
+p {
+    color: #666 !important;
+}
+
+.communiti-content {
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    width: 70%;
+}
+
+.link-before::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -60%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 5px;
+    background-color: rgb(202, 202, 202);
+}
+
+.content2::before {
+    content: '';
+    width: 50px;
+    padding-top: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: -5%;
+    background: url('/images/hand-shaking.jpg') center center/cover no-repeat;
+}
+
+.content2::after {
+    content: '';
+    width: 50px;
+    padding-top: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    background: url('/images/Book-Icon.png') center center/cover no-repeat;
+}
+
+.ms-50px {
+    margin-left: 50px;
+}
+
+.text-color {
+    color: #ccc;
+}
+
+@media only screen and (max-width:770px) {
+    .content2::after {
+        left: 12px;
+    }
+
+    .content2::before {
+        left: 12px;
+    }
+
+    .communiti-content {
+        left: 20%;
+    }
+}

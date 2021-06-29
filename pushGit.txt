@@ -1,0 +1,38 @@
+0 cd Desktop/./././ de di chuyen
+1 Tạo respon
+2 git bash vào file cần up lên git
+3 git init để tạo file git
+3 git add . 
+(git status để kiểm tra những thư mục đã được add, chưa add sẽ màu đỏ
+sau khi add no se xanh)
+4 git commit -m "Them 1 so tap tin moi"
+(git log de kiem tra nhung folder da dc commit chua add se mau do)
+5 git remote add origin http// link
+6 git push 
+
+đưa lên host: vào setting> pages > source choose app
+
+phải pull trước khi push để tránh conflic
+
+//update
+git add -A(add tat ca)
+git commit -m ''
+git remote add origin LINK
+git push -f origin master
+
+//
+--lay code ve
+git clone
+//đã clone về nhưng chưa cập nhật
+git pull origin master (lay code moi nhat ve)
+
+//nhánh
+git branch branchName//tạo nhánh mới
+git checkout branchName // chuyển nhánh
+/tắt/ git checkout -b branchName  //tự tạo và chuyển nhánh luôn
+...
+git push
+//
+git merce branchName (nhánh muốn chuyển vào)
+để đồng bộ code từ nhánh commit lên nhánh master(nó sẽ vào thẳng commit luôn
+bạn chỉ cần push lại là ok)

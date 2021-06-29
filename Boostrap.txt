@@ -1,0 +1,17 @@
+bao chứa:
+      container: mặc định một khoảng bé hơn màn hình
+	và được margin auto vào giữa
+      container-fluid:mặc định là bao chứa 100% màn hình
+col:
+	<576px col-
+	>=576 col-cm-
+	>=768	col-md-
+	>=992	col-lg-
+	>=1200	col-xl-
+	nếu chỉ thêm những cái kích thước màn hình nhỏ	
+	nhất thì những màn hình lớn sẽ mặc định ăn theo
+	casi nhỏ
+padding,margin,gutter : p,m,g
+	x,y,t,b,s,e:px-1->5
+casarel:slide
+form:

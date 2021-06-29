@@ -1,13 +1,61 @@
-a1='10' vì ''+1 đc convert sang string khi cộng thêm 0 sẽ là '10'
-a2=-1 vì ''-1 sẽ được convert sang number và khi +0 sẽ là -1
-a3=1 vì true + false đc convert sang kiểu number là 1 + 0
-a4=2 vì 6/ '3' đc convert sang number bằng 2
-a5=8 vì '4'*'2' được convert sang number bằng 8
-a6='6px' vì thực hiện phép cộng number trước = 6 rồi cộng chuỗi ra 6px
-a7=2 vì thực hiện convert '4' sang number 
-a8=NaN vì k thể qui đổi '4px' sang number được nên là NaN
-a9='   -10  5' vì thực hiện cộng chuỗi
-a10=-15 vì qui đổi phép tính sang number
-a11=1 vì null là giá trị rỗng cộng với gtri nao thì bằng chính gtri đấy
-a12=NaN vì undefined là kiểu k xác định k thể thực hiện phép tính
-a13= -4 vì qui đổi sang kiểu number
+// bài tập về nhà
+    //bài 1
+    class Familly {
+        static plant = "eats something";
+        constructor(name, speed) {
+            this.name = name;
+            this.speed =  speed;
+        }
+        run(speed = 0){
+            this.speed += speed;
+            console.log((`${this.name} runs ${this.speed}`));
+        }
+
+        static compare(famillyOne, famillyTwo){
+            return famillyOne.speed - famillyTwo.speed;
+        }
+    }
+
+    class Julia extends Familly {
+        hidden(){
+            alert(`${this.name} is hiddens`);
+        }
+
+    }
+    
+    let julias = [
+        new Julia("Julia is Junia", 10),
+        new Julia("Julia is not Junia", 5)
+    ]
+    julias.sort(Julia.compare); //Là array [Julia("Julia is not Junia", 5),Julia("Julia is Junia", 10)] vì đối
+    //số truyênf vào của julias.sort là 1 callback static compare của Julia kết thừa từ Family callback truyền
+    // vào sort thì mảng sẽ được sắp xếp theo thứ tự tăng dần 
+        
+    julias[0].run() //Julia is not Junia runs 5 vì sau khi sắp xếp thì phần từ đầu tiên chính là new Julia("Julia is Junia", 10)
+    // mà method run lại là 1 method thừa kế từ lớp Family nên khi khởi tạo julias cũng có method này để sử dụng
+    Julia.plant; //eats something vì plant là 1 static method của class Julia kế thừa từ Family nên từ class gọi đến plan thì
+    // sẽ có giá trị eats something
+
+    //bài 2
+
+    function funcPromise(srcParam){
+        return new Promise(function(resovle,reject){
+            let script = document.createElement('script'); 
+            script.src =  srcParam;
+            script.onload = () => { 
+                resovle(1)
+            }
+            script.onerror = () => reject(new Error(`script not load ${src}`))
+            document.head.append(script);
+        })
+    }
+    let active = funcPromise('https://code.jquery.com/jquery-3.6.0.js')
+    console.log(active);
+    active
+        .then((data)=>{
+            console.log(data);
+            alert(`yeah, you can get script :D${data.src} `)
+        })
+        .catch((err)=>{
+            console.log("Error :",err);
+        })
