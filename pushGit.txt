@@ -36,3 +36,36 @@ git push
 git merce branchName (nhánh muốn chuyển vào)
 để đồng bộ code từ nhánh commit lên nhánh master(nó sẽ vào thẳng commit luôn
 bạn chỉ cần push lại là ok)
+
+//git reset
+Khi mà b push code lên rồi mới phát hiện ra bị lỗi mà muốn trở về cái cũ(xóa cái hiện tại):
+
+git reset --hard idCommit(cũ) (ở local, nó sẽ xóa đi các commit sau idCommit)
+muốn lấy idcommit thì git log ra
+git push -f (bắt buộc để ghi đè những cái commit trên remote)
+
+//git revert(Commended)
+Khi mà b push code lên rồi mới phát hiện ra bị lỗi mà muốn trở về cái cũ(đổi về cái cũ)
+git revert idCommit: tạo ra commit mới giống hệt cái idCommit để đè lên cái commit hiện tại
+cũng phải push lên
+
+NOTE: :q để thoát chuowgn trình
+
+//làm việc với nhánh
+sau khi clone code về thì git fetch để cập nhập tất cả các nhánh trên origin
+(trên respone) về local (git clone r thì k cần làm cái này )
+git checkout -b [name] chuyển sang nhánh mới làm việc
+git add . git commit như thường 
+git checkout[master] quay về lại nhánh chính
+git merce name (merce nhánh phụ vào nhánh chính) // đến đây vẫn chỉ là local(thằng trưởng nhánh mới được merce)
+git push -u origin master (push lên origin) 
+	Nếu tất cả cùng clone về 1 lúc và sửa y như nhau thì thằng nào push lên
+	trước thì k lỗi gì nhưng push lên sau thì code trên origin đã thay
+	đổi rồi nên lại phải pull code về mới push lên được(git pull origin master)
+	-Nhưng khi pull về code sẽ bị conflic vì 2 thằng cùng sửa 1 chỗ nên
+	phải chọn code .
+	git add, git commit lại từ đầu(vì xử lý conflic xong thì commit lại
+	từ đầu) git push -u origin master
+	Đây là merce về nhánh của nhánh
+	Nhưng nếu muốn merce vào nhánh masteer chỉ cần vào nhánh master trên origin
+	> new pull request> create pull request> merce pull request> confirm
